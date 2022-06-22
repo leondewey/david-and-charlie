@@ -5,31 +5,40 @@ import { getImage } from "gatsby-plugin-image";
 
 import Layout from "../components/layout";
 import Box from "../components/box";
+import { HTMLContent } from "../components/content";
+
+import "./standard-page.css";
 
 // eslint-disable-next-line
-export const IndexPageTemplate = ({ title, heading }) => (
-  <Box heading={heading} />
+export const StandardPageTemplate = ({ title, heading, html }) => (
+  <div id="standard-page">
+    <section>
+      <h2>{heading}</h2>
+      <HTMLContent content={html} />
+    </section>
+  </div>
 );
 
-IndexPageTemplate.propTypes = {
+StandardPageTemplate.propTypes = {
   title: PropTypes.string,
   heading: PropTypes.string,
 };
 
-const IndexPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark;
+const StandardPage = ({ data }) => {
+  const { frontmatter, html } = data.markdownRemark;
 
   return (
     <Layout>
-      <IndexPageTemplate
+      <StandardPageTemplate
         title={frontmatter.title}
         heading={frontmatter.heading}
+        html={html}
       />
     </Layout>
   );
 };
 
-IndexPage.propTypes = {
+StandardPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
@@ -37,11 +46,12 @@ IndexPage.propTypes = {
   }),
 };
 
-export default IndexPage;
+export default StandardPage;
 
 export const pageQuery = graphql`
-  query IndexPageTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+  query StandardPageTemplate {
+    markdownRemark(frontmatter: { templateKey: { eq: "standard-page" } }) {
+      html
       frontmatter {
         title
         heading

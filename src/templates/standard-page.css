@@ -1,0 +1,18 @@
+#standard-page {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 10rem 0 0 5%;
+}
+
+#standard-page h2 {
+  font-family: "saling-cinta";
+  font-size: 8rem;
+  color: #af8c5e;
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+}
+
+#standard-page section {
+  width: calc(100% - 25rem);
+}
