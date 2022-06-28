@@ -1,8 +1,7 @@
 ---
-templateKey: "standard-page"
-path: /our-love-story
+templateKey: standard-page
+slug: /our-love-story
 title: Our Love Story
-heading: Our Love Story
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porttitor

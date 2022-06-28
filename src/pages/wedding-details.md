@@ -1,6 +1,9 @@
 ---
+templateKey: standard-page
+slug: /wedding-details
 title: Wedding details
 ---
+
 Lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce fringilla tincidunt leo. Cras pulvinar dictum elit eu faucibus. Fusce et tincidunt dui. Phasellus in est elementum, mollis nibh in, laoreet ipsum. Aenean nec enim non libero bibendum sollicitudin non eget tellus. Nam non mattis erat. Duis id magna quis dui viverra varius.
 
 Ut scelerisque consequat sapien. Ut eros quam, scelerisque vitae ullamcorper ut, pellentesque dictum diam. Pellentesque ut nisi massa. Integer ac viverra diam. Vivamus et tortor porttitor, bibendum ex sed, lobortis neque. Quisque vel efficitur risus. Vestibulum quis ante enim.

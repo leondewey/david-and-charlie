@@ -10,10 +10,10 @@ import { HTMLContent } from "../components/content";
 import "./standard-page.css";
 
 // eslint-disable-next-line
-export const StandardPageTemplate = ({ title, heading, html }) => (
+export const StandardPageTemplate = ({ title, html }) => (
   <div id="standard-page">
     <section>
-      <h2>{heading}</h2>
+      <h2>{title}</h2>
       <HTMLContent content={html} />
     </section>
   </div>
@@ -29,11 +29,7 @@ const StandardPage = ({ data }) => {
 
   return (
     <Layout>
-      <StandardPageTemplate
-        title={frontmatter.title}
-        heading={frontmatter.heading}
-        html={html}
-      />
+      <StandardPageTemplate title={frontmatter.title} html={html} />
     </Layout>
   );
 };
@@ -49,12 +45,11 @@ StandardPage.propTypes = {
 export default StandardPage;
 
 export const pageQuery = graphql`
-  query StandardPageTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq: "standard-page" } }) {
+  query StandardPageTemplate($slug: String) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
         title
-        heading
       }
     }
   }

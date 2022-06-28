@@ -1,51 +1,49 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
-import { getImage } from "gatsby-plugin-image";
-
 import Layout from "../components/layout";
 import Box from "../components/box";
 
-// eslint-disable-next-line
-export const IndexPageTemplate = ({ title, heading }) => (
-  <Box heading={heading} />
+export const IndexPageTemplate = ({ title, imageUrl }) => (
+  <div id="index-page">
+    <Box title={title} imageUrl={imageUrl} />
+  </div>
 );
 
-IndexPageTemplate.propTypes = {
-  title: PropTypes.string,
-  heading: PropTypes.string,
-};
-
-const IndexPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark;
-
-  return (
-    <Layout>
-      <IndexPageTemplate
-        title={frontmatter.title}
-        heading={frontmatter.heading}
-      />
-    </Layout>
-  );
-};
+const IndexPage = ({
+  data: {
+    markdownRemark: {
+      frontmatter: { title, image },
+    },
+  },
+}) => (
+  <Layout>
+    <IndexPageTemplate title={title} imageUrl={image.publicURL} />
+  </Layout>
+);
 
 IndexPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object,
+      frontmatter: {
+        title: PropTypes.string,
+        image: PropTypes.object,
+      },
     }),
   }),
 };
-
-export default IndexPage;
 
 export const pageQuery = graphql`
   query IndexPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         title
-        heading
+        image {
+          publicURL
+        }
       }
     }
   }
 `;
+
+export default IndexPage;

@@ -26,7 +26,6 @@
 }
 
 #box .box .image {
-  background-image: url("../../img/box-background.jpg");
   background-position: 50% 0;
   background-size: cover;
   width: 100%;
