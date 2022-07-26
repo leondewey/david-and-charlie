@@ -18,7 +18,9 @@ exports.createPages = ({ actions, graphql }) => {
             frontmatter {
               templateKey
               slug
+              title
             }
+            html
           }
         }
       }
@@ -34,16 +36,6 @@ exports.createPages = ({ actions, graphql }) => {
     posts.forEach((edge) => {
       const id = edge.node.id;
 
-      // console.log({
-      //   edge: edge,
-      //   "edge.node": edge.node,
-      //   "edge.node.id": edge.node.id,
-      //   "edge.node.fields": edge.node.fields,
-      //   "edge.node.frontmatter": edge.node.frontmatter,
-      // });
-
-      console.log("edge.node.frontmatter.slug", edge.node.frontmatter.slug);
-
       createPage({
         path: edge.node.frontmatter.slug,
         component: path.resolve(
@@ -53,6 +45,8 @@ exports.createPages = ({ actions, graphql }) => {
         context: {
           id,
           slug: edge.node.frontmatter.slug,
+          title: edge.node.frontmatter.title,
+          html: edge.node.html,
         },
       });
     });

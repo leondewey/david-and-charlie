@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "gatsby";
+import { Link, useStaticQuery, graphql } from "gatsby";
 import "./index.css";
 
 // const Navbar = class extends React.Component {
@@ -82,37 +82,47 @@ import "./index.css";
 //   }
 // };
 
-const sections = [
-  "Our Love Story",
-  "Wedding Details",
-  "Ceremony",
-  "Reception",
-  "Wedding Itinerary ",
-  "RSVP",
-  "Gifts",
-  "Getting there and transport",
-  "Accommodation",
-  "What to bring",
-  "More Details",
-];
+const Navbar = () => {
+  const data = useStaticQuery(graphql`
+    query HeaderQuery {
+      allMarkdownRemark(
+        limit: 1000
+        filter: { frontmatter: { templateKey: { eq: "standard-page" } } }
+      ) {
+        edges {
+          node {
+            frontmatter {
+              slug
+              title
+              templateKey
+            }
+          }
+        }
+      }
+    }
+  `);
 
-const toLink = (section) => section.replaceAll(" ", "-").toLowerCase();
+  const pages = data.allMarkdownRemark.edges.map((edge) => ({
+    title: edge.node.frontmatter.title,
+    href: edge.node.frontmatter.slug,
+  }));
 
-const Navbar = () => (
-  <div id="nav">
-    <nav className="border">
-      <ul>
-        <li>
-          <a href="/">Home</a>
-        </li>
-        {sections.map((section) => (
-          <li key={section}>
-            <a href={`/${toLink(section)}`}>{section}</a>
+  return (
+    <div id="nav">
+      <nav className="border">
+        <ul>
+          <li>
+            <a href="/">Home</a>
           </li>
-        ))}
-      </ul>
-    </nav>
-  </div>
-);
+          {pages.map(({ href, title }) => (
+            <li key={href}>
+              <a href={href}>{title}</a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </div>
+  );
+};
 
 export default Navbar;

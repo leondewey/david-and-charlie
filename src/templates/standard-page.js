@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+import PropTypes, { string } from "prop-types";
 import { Link, graphql } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
 
@@ -24,33 +24,17 @@ StandardPageTemplate.propTypes = {
   heading: PropTypes.string,
 };
 
-const StandardPage = ({ data }) => {
-  const { frontmatter, html } = data.markdownRemark;
-
-  return (
-    <Layout>
-      <StandardPageTemplate title={frontmatter.title} html={html} />
-    </Layout>
-  );
-};
+const StandardPage = ({ pageContext }) => (
+  <Layout>
+    <StandardPageTemplate {...pageContext} />
+  </Layout>
+);
 
 StandardPage.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object,
-    }),
+  pageContext: PropTypes.shape({
+    title: string,
+    html: string,
   }),
 };
 
 export default StandardPage;
-
-export const pageQuery = graphql`
-  query StandardPageTemplate($slug: String) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
-      frontmatter {
-        title
-      }
-    }
-  }
-`;
