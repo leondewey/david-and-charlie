@@ -1,7 +1,7 @@
 #standard-page {
-  display: flex;
-  flex-flow: row wrap;
-  margin: 10rem 0 0 5%;
+  /* display: flex;
+  flex-flow: row wrap; */
+  /* margin: 10rem 0 0 5%; */
 }
 
 #standard-page h2 {
@@ -14,5 +14,6 @@
 }
 
 #standard-page section {
-  width: calc(100% - 25rem);
+  /* width: calc(100% - 25rem); */
+  margin: 5vh 5vw;
 }

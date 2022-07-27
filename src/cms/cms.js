@@ -9,5 +9,4 @@ CMS.registerMediaLibrary(uploadcare);
 CMS.registerMediaLibrary(cloudinary);
 
 CMS.registerPreviewTemplate("index", IndexPagePreview);
-CMS.registerPreviewTemplate("wedding-details", StandardPagePreview);
-CMS.registerPreviewTemplate("our-love-story", StandardPagePreview);
+// CMS.registerPreviewTemplate("pages", StandardPagePreview);

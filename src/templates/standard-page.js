@@ -25,7 +25,7 @@ StandardPageTemplate.propTypes = {
 };
 
 const StandardPage = ({ pageContext }) => (
-  <Layout>
+  <Layout {...pageContext}>
     <StandardPageTemplate {...pageContext} />
   </Layout>
 );

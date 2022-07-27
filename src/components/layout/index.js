@@ -6,7 +6,7 @@ import "./index.css";
 import useSiteMetadata from "../site-metadata";
 import { withPrefix } from "gatsby";
 
-const TemplateWrapper = ({ children }) => {
+const TemplateWrapper = ({ children, slug }) => {
   const { title, description } = useSiteMetadata();
   return (
     <div>
@@ -32,7 +32,6 @@ const TemplateWrapper = ({ children }) => {
           href={`${withPrefix("/")}img/favicon-16x16.png`}
           sizes="16x16"
         />
-
         <link
           rel="mask-icon"
           href={`${withPrefix("/")}img/safari-pinned-tab.svg`}
@@ -48,9 +47,14 @@ const TemplateWrapper = ({ children }) => {
           content={`${withPrefix("/")}img/og-image.jpg`}
         />
       </Helmet>
-      <Navbar />
-      <div>{children}</div>
-      <Footer />
+      <div id="outer-container">
+        <Navbar />
+        <main id="page-wrap">
+          {slug && <h1 id="header">David &amp; Charlie</h1>}
+          {children}
+          <Footer />
+        </main>
+      </div>
     </div>
   );
 };

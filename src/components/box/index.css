@@ -10,7 +10,7 @@
 #box .wrapper {
   position: relative;
   height: 75vh;
-  width: 75vh;
+  width: 75vw;
 }
 
 #box .border {
