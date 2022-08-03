@@ -13,8 +13,10 @@ import "./standard-page.css";
 export const StandardPageTemplate = ({ title, html }) => (
   <div id="standard-page">
     <section>
-      <h2>{title}</h2>
-      <HTMLContent content={html} />
+      <h2 class="heading">{title}</h2>
+      <div className="content">
+        <HTMLContent content={html} />
+      </div>
     </section>
   </div>
 );

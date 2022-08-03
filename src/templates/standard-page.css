@@ -1,19 +1,38 @@
-#standard-page {
-  /* display: flex;
-  flex-flow: row wrap; */
-  /* margin: 10rem 0 0 5%; */
-}
-
-#standard-page h2 {
+#standard-page h2.heading {
   font-family: "saling-cinta";
   font-size: 8rem;
   color: #af8c5e;
   font-weight: normal;
-  padding: 0;
+  padding: 0 -5vh;
   margin: 0;
+  position: relative;
+  top: -10vh;
+  transform: rotate(-10deg);
 }
 
 #standard-page section {
   /* width: calc(100% - 25rem); */
-  margin: 5vh 5vw;
+  margin: 5vh 5vw 0 5vw;
+}
+
+#standard-page .content {
+  padding: 0vh 15vw;
+  line-height: 2rem;
+  font-size: 20px;
+}
+
+#standard-page .content h2 {
+  color: #af8c5e;
+  font-weight: 300;
+  margin: 60px 0 0 0;
+}
+
+#standard-page .content ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0 0;
+}
+
+#standard-page .content ul ul {
+  margin: 5px 20px;
 }
