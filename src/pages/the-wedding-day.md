@@ -1,7 +1,8 @@
 ---
 templateKey: standard-page
 slug: the-wedding-day
-title: The Wedding Day
+title: Wedding Day
+order: 3
 ---
 
 ## Ceremony
@@ -10,8 +11,8 @@ title: The Wedding Day
   - Saturday, 25th February 2023 @ 3.00pm
 - _Location_
   - Moonlight Lodge, Ben Lomond Station – see transport and accommodation options below for further details.
-
-## Dress Code: Formal
+- _Dress Code_
+  - Formal
 
 All guests need to be at the ceremony venue by 2.30 pm for a 2.50 pm seating.
 

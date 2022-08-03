@@ -2,6 +2,7 @@
 templateKey: standard-page
 slug: /accommodation
 title: Accommodation
+order: 6
 ---
 
 Due to the remote location of our Wedding, accommodation overnight will be required. There are two amazing accommodation options which we have assigned to guests depending on their needs. Once you have RSVP we will provide you with your room number. The venue has kindly offered special rates for the accommodation of $150 per person, with payment to be made via bank transfer.

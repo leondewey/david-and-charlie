@@ -2,6 +2,7 @@
 templateKey: standard-page
 slug: /transport
 title: Transport
+order: 5
 ---
 
 Our Wedding venue is nestled deep in 33,000 acre Ben Lomond Station with access via 4WD or Helicopter only, as part of the RSVP please do let us know which transport option you would like to take.

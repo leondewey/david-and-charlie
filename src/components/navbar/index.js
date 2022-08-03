@@ -17,6 +17,7 @@ const Navbar = () => {
               slug
               title
               templateKey
+              order
             }
           }
         }
@@ -27,6 +28,7 @@ const Navbar = () => {
   const pages = data.allMarkdownRemark.edges.map((edge) => ({
     title: edge.node.frontmatter.title,
     href: edge.node.frontmatter.slug,
+    order: edge.node.frontmatter.order,
   }));
 
   return (
@@ -34,11 +36,13 @@ const Navbar = () => {
       <a className="menu-item" href="/">
         Home
       </a>
-      {pages.map(({ href, title }) => (
-        <a key={href} className="menu-item" href={href}>
-          {title}
-        </a>
-      ))}
+      {pages
+        .sort((a, b) => a.order - b.order)
+        .map(({ href, title }) => (
+          <a key={href} className="menu-item" href={href}>
+            {title}
+          </a>
+        ))}
     </Menu>
   );
 };

@@ -2,6 +2,7 @@
 templateKey: standard-page
 slug: /contact-us
 title: Contact Us
+order: 9
 ---
 
 If you have any questions about anything to do with the wedding or need some help with travel let us know we are more than happy to help!

@@ -2,6 +2,7 @@
 templateKey: standard-page
 slug: /timeline
 title: Timeline
+order: 4
 ---
 
 - ## 1st November 2022

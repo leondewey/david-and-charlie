@@ -19,6 +19,7 @@ exports.createPages = ({ actions, graphql }) => {
               templateKey
               slug
               title
+              order
             }
             html
           }
