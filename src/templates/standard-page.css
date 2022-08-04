@@ -36,3 +36,19 @@
 #standard-page .content ul ul {
   margin: 5px 20px;
 }
+
+@media only screen and (max-width: 1200px) {
+  #standard-page h2.heading {
+    font-size: 4rem;
+    top: 30px;
+    transform: rotate(0);
+    padding: 35px 0;
+    text-align: center;
+  }
+
+  #standard-page .content {
+    padding: 0vh 5vw 5vh;
+    line-height: 2rem;
+    font-size: 20px;
+  }
+}
