@@ -25,23 +25,29 @@ const Navbar = () => {
     }
   `);
 
-  const pages = data.allMarkdownRemark.edges.map((edge) => ({
-    title: edge.node.frontmatter.title,
-    href: edge.node.frontmatter.slug,
-    order: edge.node.frontmatter.order,
-  }));
+  const pages = [
+    { href: "/", title: "Home" },
+    ...data.allMarkdownRemark.edges.map((edge) => ({
+      title: edge.node.frontmatter.title,
+      href: edge.node.frontmatter.slug,
+      order: edge.node.frontmatter.order,
+    })),
+  ];
 
   return (
     <Menu pageWrapId="page-wrap" outerContainerId="outer-container">
-      <a className="menu-item" href="/">
-        Home
-      </a>
       {pages
         .sort((a, b) => a.order - b.order)
         .map(({ href, title }) => (
-          <a key={href} className="menu-item" href={href}>
+          <Link
+            key={href}
+            className="menu-item"
+            to={href}
+            activeStyle={{ textDecoration: "underline" }}
+            partiallyActive={href === "/" ? false : true}
+          >
             {title}
-          </a>
+          </Link>
         ))}
     </Menu>
   );

@@ -1,6 +1,6 @@
 ---
 templateKey: standard-page
-slug: the-wedding-day
+slug: /wedding-day
 title: Wedding Day
 order: 3
 ---
