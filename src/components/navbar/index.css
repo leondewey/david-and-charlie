@@ -11,12 +11,11 @@
 .bm-burger-bars {
   background: #000;
   height: 5% !important;
-  /* background: linear-gradient(to left, #f5deb6, #af8c5e); */
 }
 
 /* Color/shape of burger icon bars on hover*/
 .bm-burger-bars-hover {
-  /* background: linear-gradient(to left, #af8c5e, #000); */
+  background: #fc7127;
 }
 
 /* Position and sizing of clickable cross button */
@@ -27,7 +26,7 @@
 
 /* Color/shape of close button cross */
 .bm-cross {
-  background: #af8c5e;
+  background: #fc7127;
 }
 
 /*
@@ -66,7 +65,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 .bm-item:hover {
-  color: #af8c5e;
+  color: #fc7127;
   text-decoration: none;
 }
 

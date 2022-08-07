@@ -1,8 +1,6 @@
 import React from "react";
 import PropTypes, { string } from "prop-types";
 import { Link, graphql } from "gatsby";
-import { getImage } from "gatsby-plugin-image";
-
 import Layout from "../components/layout";
 import Box from "../components/box";
 import { HTMLContent } from "../components/content";

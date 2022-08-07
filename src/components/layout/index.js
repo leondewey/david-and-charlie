@@ -49,9 +49,8 @@ const TemplateWrapper = ({ children, slug }) => {
       </Helmet>
       <div id="outer-container">
         <Navbar />
-        {slug && <h1 id="header">David &amp; Charlie</h1>}
-
         <main id="page-wrap">
+          {slug && <h1 id="header">David &amp; Charlie</h1>}
           {children}
           <Footer />
         </main>

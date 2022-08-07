@@ -16,7 +16,7 @@
 #box .border {
   border: 3px solid;
   border-image-slice: 1;
-  border-image-source: linear-gradient(to left, #f5deb6, #af8c5e);
+  border-image-source: linear-gradient(to left, #fc71274d, #fc7127);
 }
 
 #box .box {
