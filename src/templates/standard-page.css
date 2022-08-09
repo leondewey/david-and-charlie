@@ -37,6 +37,30 @@
   margin: 5px 20px;
 }
 
+#standard-page .rsvp-link {
+  text-decoration: none;
+  cursor: pointer;
+  outline: 0;
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 6px 12px;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  color: #fc7127;
+  border-color: #fc7127;
+}
+#standard-page .rsvp-link:hover {
+  color: #fff;
+  background-color: #fc7127;
+  border-color: #fc7127;
+}
+
 @media only screen and (max-width: 1200px) {
   #standard-page h2.heading {
     font-size: 4rem;
