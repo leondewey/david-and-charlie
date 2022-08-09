@@ -4,7 +4,6 @@ slug: /transport
 title: Transport
 order: 5
 ---
-
 Our Wedding venue is nestled deep in 33,000 acre Ben Lomond Station with access via 4WD or Helicopter only, as part of the RSVP please do let us know which transport option you would like to take.
 
 ## Helicopter
@@ -15,6 +14,6 @@ The helicopter transport option is an 8 minute flight from The Helicopter Line, 
 
 The 4WD track is a beautifully scenic self driven trip. The trip will take approximately 45 minutes including 5 river crossings. This track is for experienced drivers only and we can organise carpooling for those that do not wish to drive themselves. Please let us know when you RSVP if you require this.
 
-We suggest eating some lunch prior to travelling to the Wedding.
+We suggest eating some lunch prior to travelling to the Wedding. Nibbles will be provided from 2.00pm.
 
 Please don’t forget to let us know your preferred transport options in the RSVP – including your return option.
